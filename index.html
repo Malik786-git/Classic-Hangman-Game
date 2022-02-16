@@ -14,6 +14,7 @@
     <p>Find the hidden word - guess the letter by entering it on your keyboard</p>
 
     <div class="game-container">
+        <!-- platform and man -->
         <svg height="250" width="250" class="figure-container">
             <!-- hanging man platform -->
             <!-- <line x1 y1, x2 y2 /> -->
@@ -23,19 +24,52 @@
             <line x1="30" y1="230" x2="90" y2="230" />
             <!-- this is the hangman -->
             <!-- head of man -->
-            <circle cx="140" cy="70" r="20" />
+            <circle cx="140" cy="70" r="20" class="figure-part" />
                 <!-- body of man -->
-                <line x1="140" y1="90" x2="140" y2="150" />
+                <line x1="140" y1="90" x2="140" y2="150" class="figure-part"/>
                 <!-- arms of man -->
-                <line x1="140" y1="100" x2="110" y2="150" />                
-                <line x1="140" y1="100" x2="170" y2="150" />
+                <line x1="140" y1="100" x2="110" y2="150" class="figure-part"/>                
+                <line x1="140" y1="100" x2="170" y2="150" class="figure-part"/>
                 <!-- legs of man -->
-                <line x1="140" y1="150" x2="110" y2="190" />                
-                <line x1="140" y1="150" x2="170" y2="190" />
+                <line x1="140" y1="150" x2="110" y2="190" class="figure-part"/>                
+                <line x1="140" y1="150" x2="170" y2="190" class="figure-part"/>
 
         </svg>
+<!-- incorrect letters -->
+           <div class="incorrect-letters-container">
+               <div id="incorrect-letters">
+                   <!-- <p>Incorrect Guesses</p>
+                   <span>a, i, r, l</span> -->
+               </div>
+           </div>
+<!-- word -->
+           <div class="word" id="word">
+               <!-- <div class="letter">h</div>
+               <div class="letter">e</div>
+               <div class="letter">y</div> -->
+           </div>
+         <!-- popup -->
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <div class="popup-container" id="popup-container">
+             <div class="popup">
+                 <h2 id="final-message">
+                     <!-- Congratulations! You win -->
+                 </h2>
+                 <button id="play-btn">Play Again</button>
+             </div>
+         </div>
+
+        
     </div>
 
+ <!-- notification if user enters are repeat letters -->
+ <div class="notification-container" id="notification-container">
+    <p>It look like you've already guessed this letter. Please try another letter. </p>
+</div>
 
 
 
